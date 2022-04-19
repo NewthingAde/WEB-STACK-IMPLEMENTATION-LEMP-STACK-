@@ -11,6 +11,6 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
              
              `sudo chmod 0400 <private-key-name>.pem`
               
-             `ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>`
+             ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
               
             
