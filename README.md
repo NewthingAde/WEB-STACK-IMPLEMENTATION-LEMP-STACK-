@@ -52,10 +52,67 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
 <img width="941" alt="ngi" src="https://user-images.githubusercontent.com/80678596/164012163-828c968d-f82c-4bab-a959-d4e81405c188.png">
 
 
+## INSTALLING MYSQL
 
+- To install the software we use apt using this command
 
+                - ´sudo apt install mysql-server´
+                
+- we run the command below to remove every default insecure settings that comes with mysql
 
+                - ´sudo mysql_secure_installation´
 
+- After the installation is finished checked if you can login to MYSQL
 
+                - ´sudo mysql´ 
+              
+- To stop the server you can use 
+
+                - `exit`
+                
+## INSTALLING PHP
+
+- Now we can install PHP to process code and generate dynamic content for the web server using the command
+                
+                - ´sudo apt install php-fpm php-mysql´
+
+##  CONFIGURING NGINX TO USE PHP PROCESSOR
+
+When using the Nginx web server, we can create server blocks (similar to virtual hosts in Apache) to encapsulate configuration details and host more than one domain on a single server.
+
+- Create the root web directory for your_domain as follows
+
+                - ´sudo mkdir /var/www/projectLEMP´
+
+- Next, assign ownership of the directory with the $USER environment variable, which will reference your current system user
+                - `sudo chown -R $USER:$USER /var/www/projectLEMP´
+ 
+ - Next, open a new configuration file in Nginx’s 
+
+                - ´sudo nano /etc/nginx/sites-available/projectLEMP´
+- Copy and paste the command into the open window
+                - ´#/etc/nginx/sites-available/projectLEMP
+
+server {
+    listen 80;
+    server_name projectLEMP www.projectLEMP;
+    root /var/www/projectLEMP;
+
+    index index.html index.htm index.php;
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+     }
+
+    location ~ /\.ht {
+        deny all;
+    }
+
+}´
 
 
