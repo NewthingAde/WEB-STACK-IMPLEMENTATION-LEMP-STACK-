@@ -91,28 +91,29 @@ When using the Nginx web server, we can create server blocks (similar to virtual
 
                 - ´sudo nano /etc/nginx/sites-available/projectLEMP´
 - Copy and paste the command into the open window
-                - ´#/etc/nginx/sites-available/projectLEMP
+               
+                ´#/etc/nginx/sites-available/projectLEMP
 
-server {
-    listen 80;
-    server_name projectLEMP www.projectLEMP;
-    root /var/www/projectLEMP;
+                      server {
+                          listen 80;
+                          server_name projectLEMP www.projectLEMP;
+                          root /var/www/projectLEMP;
 
-    index index.html index.htm index.php;
+                          index index.html index.htm index.php;
 
-    location / {
-        try_files $uri $uri/ =404;
-    }
+                          location / {
+                              try_files $uri $uri/ =404;
+                          }
 
-    location ~ \.php$ {
-        include snippets/fastcgi-php.conf;
-        fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
-     }
+                          location ~ \.php$ {
+                              include snippets/fastcgi-php.conf;
+                              fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+                           }
 
-    location ~ /\.ht {
-        deny all;
-    }
+                          location ~ /\.ht {
+                              deny all;
+                          }
 
-}´
+                      }´
 
 
