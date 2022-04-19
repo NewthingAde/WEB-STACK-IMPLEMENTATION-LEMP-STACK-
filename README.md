@@ -40,4 +40,22 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
          
 <img width="813" alt="ngix" src="https://user-images.githubusercontent.com/80678596/164011106-8b3a48fe-10a2-4b6a-ad0f-1e93b6c5deb5.png">
 
+- You can retrieve your IP address uisng the command
+
+              - `curl -s http://169.254.169.254/latest/meta-data/public-ipv4`
+              
+- Go to a web browser and open the page using the IP address
+
+                - `http://<Public-IP-Address>:80`
+
+
+<img width="941" alt="ngi" src="https://user-images.githubusercontent.com/80678596/164012163-828c968d-f82c-4bab-a959-d4e81405c188.png">
+
+
+
+
+
+
+
+
 
