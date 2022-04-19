@@ -17,4 +17,4 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
             
 ## INSTALLING THE NGINX WEB SERVER
 - we update the server package index with the command
-             - `sudo apt update
+             - `sudo apt update´
