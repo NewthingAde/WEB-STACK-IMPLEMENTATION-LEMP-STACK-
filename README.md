@@ -165,5 +165,12 @@ location ~ /\.ht — The last location block deals with .htaccess files, which N
 
 ## TESTING PHP WITH NGINX
 
-- 
+- Create a test PHP file in your document root
+
+                - ´sudo nano /var/www/projectLEMP/info.php´
+
+- Copy and paste the command into the file that opens
+
+                - ´<?php
+                  phpinfo();´
 
