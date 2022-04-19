@@ -157,7 +157,13 @@ location ~ /\.ht — The last location block deals with .htaccess files, which N
                     - ´sudo echo 'Hello LEMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/projectLEMP/index.html´
 
 
+- Now go to your browser and try to open your website URL using IP address
 
+                    - ´http://<Public-IP-Address>:80´
+                    
+<img width="878" alt="n" src="https://user-images.githubusercontent.com/80678596/164023807-5ec3871b-5da8-4da4-912a-f1eb215629ee.png">
 
+## TESTING PHP WITH NGINX
 
+- 
 
