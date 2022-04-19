@@ -225,3 +225,58 @@ location ~ /\.ht — The last location block deals with .htaccess files, which N
 - Insert a few rows of content in the test table. You might want to repeat the next command a few times, using different VALUES:
 
                  - ´INSERT INTO example_database.todo_list (content) VALUES ("My first important item");´
+
+- To confirm that the data was successfully saved to your table, run:
+
+                  - ´SELECT * FROM example_database.todo_list;´
+
+- This output will be shown
+
+<img width="356" alt="Screenshot 2022-04-19 at 14 27 57" src="https://user-images.githubusercontent.com/80678596/164030468-8aeaff21-c988-41bc-b2d7-e2825e68b7af.png">
+
+- You can exit the MySQL console after confirming valid data in your test table
+
+                  - ´exit´
+
+- Now you can create a PHP script that will connect to MySQL and query for your content
+
+                  - ´nano /var/www/projectLEMP/todo_list.php´
+                  
+- Copy this content into your todo_list.php script:
+
+                      - ´<?php
+                          $user = "example_user";
+                          $password = "password";
+                          $database = "example_database";
+                          $table = "todo_list";
+
+                          try {
+                            $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+                            echo "<h2>TODO</h2><ol>";
+                            foreach($db->query("SELECT content FROM $table") as $row) {
+                              echo "<li>" . $row['content'] . "</li>";
+                            }
+                            echo "</ol>";
+                          } catch (PDOException $e) {
+                              print "Error!: " . $e->getMessage() . "<br/>";
+                              die();
+                          }´
+
+
+- Save and close the file when you are done editing.
+
+- You can now access this page in your web browser by visiting the domain name or public IP address configured for your website, followed by /todo_list.php
+
+                        - ´http://<Public_domain_or_IP>/todo_list.php´
+
+- You should see a page like this, showing the content you’ve inserted in your test table
+
+<img width="654" alt="Screenshot 2022-04-19 at 14 28 45" src="https://user-images.githubusercontent.com/80678596/164031753-472e88a6-abf0-4a15-b725-da7b0b2f8047.png">
+
+- That means your PHP environment is ready to connect and interact with your MySQL server.
+
+
+
+
+
+
