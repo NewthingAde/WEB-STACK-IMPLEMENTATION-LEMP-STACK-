@@ -8,9 +8,11 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
 
 - Create a pair Key as the EC2 is created
 
-- Move into the folder where the pair key is downloaded and run the following command to connect to the instance 
+- Move into the folder where the pair key is downloaded and run the following command to first change the mode
              
              - sudo chmod 0400 <private-key-name>.pem
+             
+- Use the command to connect to the instances
               
              - ssh -i <private-key-name>.pem ubuntu@<Public-IP-address>
               
@@ -27,3 +29,15 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
 - To verify that nginx was successfully installed and is running as a service in Ubuntu, run:
           
             - ´sudo systemctl status nginx´
+
+- we try to access it locally on our ubuntu shell
+
+            - `curl http://localhost:80´
+     
+                        or use 
+                        
+              `curl http://127.0.0.1:80´           
+         
+<img width="813" alt="ngix" src="https://user-images.githubusercontent.com/80678596/164011106-8b3a48fe-10a2-4b6a-ad0f-1e93b6c5deb5.png">
+
+
