@@ -184,14 +184,26 @@ location ~ /\.ht — The last location block deals with .htaccess files, which N
 
                 - ´sudo rm /var/www/your_domain/info.php´
 
+## RETRIEVING DATA FROM MYSQL DATABASE WITH PHP (CONTINUED)
 
+- First, connect to the MySQL console using the root account:
 
+                - ´sudo mysql´
+                
+- Create a new database, run the following command from your MySQL console:
 
+                - ´CREATE DATABASE `example_database`;´
+- We creates a new user named example_user, using mysql_native_password as default authentication method
 
+                - ´CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';´
+                
+- Now we need to give this user permission over the example_database database:
 
+                - ´GRANT ALL ON example_database.* TO 'example_user'@'%';´
 
+- Now exit the MySQL shell with
 
-
+                - ´exit´
 
 
 
