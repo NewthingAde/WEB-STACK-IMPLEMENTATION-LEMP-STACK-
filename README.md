@@ -173,4 +173,25 @@ location ~ /\.ht — The last location block deals with .htaccess files, which N
 
                 - ´<?php
                   phpinfo();´
+                 
+ - You can now access this page in your web browser 
+
+                - ´http://`server_domain_or_IP`/info.php´
+  
+<img width="1200" alt="Screenshot 2022-04-19 at 13 49 03" src="https://user-images.githubusercontent.com/80678596/164025635-ad0cb50e-dc9e-44b7-9d19-ff1b28c6de7c.png">
+
+- Remove the file using the following command
+
+                - ´sudo rm /var/www/your_domain/info.php´
+
+
+
+
+
+
+
+
+
+
+
 
