@@ -205,5 +205,23 @@ location ~ /\.ht — The last location block deals with .htaccess files, which N
 
                 - ´exit´
 
+- You can test if the new user has the proper permissions by logging in to the MySQL console again
 
+                - ´mysql -u example_user -p´
+   <img width="642" alt="user" src="https://user-images.githubusercontent.com/80678596/164028884-f1b877bd-6ed7-4356-97f8-d63965a4b84c.png">
 
+- After logging in to the MySQL console, confirm that you have access to the example_database database
+
+                - ´SHOW DATABASES;´
+
+- The following output will be shown
+
+<img width="312" alt="Screenshot 2022-04-19 at 14 03 52" src="https://user-images.githubusercontent.com/80678596/164029458-1cc56c23-4a2f-4fbc-bf48-33c129876716.png">
+
+- Next, we’ll create a test table named todo_list. From the MySQL console, run the following statement
+
+                 - ´CREATE TABLE example_database.todo_list (item_id INT AUTO_INCREMENT, content VARCHAR(255), PRIMARY KEY(item_id));´
+             
+- Insert a few rows of content in the test table. You might want to repeat the next command a few times, using different VALUES:
+
+                 - ´INSERT INTO example_database.todo_list (content) VALUES ("My first important item");´
