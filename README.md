@@ -92,7 +92,7 @@ When using the Nginx web server, we can create server blocks (similar to virtual
                 - ´sudo nano /etc/nginx/sites-available/projectLEMP´
 - Copy and paste the command into the open window
                
-                ´#/etc/nginx/sites-available/projectLEMP
+                #/etc/nginx/sites-available/projectLEMP
 
                       server {
                           listen 80;
@@ -114,6 +114,6 @@ When using the Nginx web server, we can create server blocks (similar to virtual
                               deny all;
                           }
 
-                      }´
+                      }
 
 
