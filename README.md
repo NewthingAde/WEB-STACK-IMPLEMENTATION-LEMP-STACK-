@@ -17,4 +17,13 @@ This is a project which implement the use of Web Stack (LEMP STACK) In AWS
             
 ## INSTALLING THE NGINX WEB SERVER
 - we update the server package index with the command
+            
             - `sudo apt update´
+
+- we use the command to then get NGINX installed
+
+            - `sudo apt install nginx`
+
+- To verify that nginx was successfully installed and is running as a service in Ubuntu, run:
+          
+            - ´sudo systemctl status nginx´
