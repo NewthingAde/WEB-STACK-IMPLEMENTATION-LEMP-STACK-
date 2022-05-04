@@ -1,6 +1,6 @@
 # WEB-STACK-IMPLEMENTATION-LEMP-STACK-
 
-This is a project which implement the use of Web Stack (LEMP STACK) In AWS
+This is a project which implement the use of Web Stack (LEMP STACK) In AWS. LEMP (Linux, Nginx, MySQL, PHP or Python, or Perl)
 
 ## CREATING EC2 INSTANCE ON AWS
 
